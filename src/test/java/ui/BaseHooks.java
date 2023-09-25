@@ -1,3 +1,5 @@
+package ui;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -20,8 +22,8 @@ abstract public class BaseHooks {
         setUp();
     }
 
-//    @After
-//    public void tearDown() {
-//        Selenide.closeWebDriver();
-//    }
+    @After
+    public void tearDown() {
+        Selenide.closeWebDriver();
+    }
 }
