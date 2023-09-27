@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
 
-                sh "mvn -Dtest="
+                sh "mvn -Dtest=ui.** verify"
             }
         }
     }
