@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        jdk "1.8"
-        maven "3.8.4"
+        jdk "null"
+        maven "maven_jenkins"
     }
 
     parameters {
