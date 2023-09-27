@@ -7,6 +7,7 @@ pipeline {
     }
 
     parameters {
+        choice(choices: ["stand1", "stand2", "stand3"], description: "выбери свой стенд", name: "stands")
         booleanParam(defaultValue: true, description: "run UI tests", name: "go")
         booleanParam(defaultValue: false, description: "run BE tests", name: "no")
     }
