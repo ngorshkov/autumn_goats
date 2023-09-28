@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import static com.codeborne.selenide.Selenide.$x;
 
 /*
- * Главная старница сайта aplleinsider.ru
+ * Главная старница сайта mvideo.ru
  */
 public class MainPage {
     private final SelenideElement textBoxInput = $x("//input[@class='input__field']");
@@ -18,17 +18,25 @@ public class MainPage {
     private WebElement searchBotton;
     private final SelenideElement catalogBotton = $x("");
 
+
+    /**
+     * Открытия сайта в браузере
+     *
+     * @param url - ссылка на открываемый сайт
+     */
+    public void openWebSite(String url) {
+        Selenide.open(url);
+    }
+
     /**
      * Выполняется заполнение поисковово поля и клик на иконку лупы
      *
-     * @param searchString - поисковая строка
+     * @param searchString - значение, заполняемое в поискову строку
      */
     public void search(String searchString) {
         textBoxInput.setValue(searchString);
         //searchBotton.click();
     }
 
-    public void openWebSite(String url) {
-        Selenide.open(url);
-    }
+
 }

@@ -1,7 +1,8 @@
 package ui;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import ui.pages.MainPage;
 import ui.pages.SearchPage;
 
@@ -17,6 +18,6 @@ public class AppleTest extends BaseHooks {
         mainPage.search(SEARCH_STRING);
         SearchPage searchPage = new SearchPage();
         String productName = searchPage.getHrefFromFirstArticle();
-        Assert.assertTrue(productName.contains("iphone-13"));
+        Assertions.assertTrue(productName.contains("iphone-13"));
     }
 }
